@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/portraits",
+      "handler": "Portraits.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/portraits/count",
+      "handler": "Portraits.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/portraits/:id",
+      "handler": "Portraits.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/portraits",
+      "handler": "Portraits.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/portraits/:id",
+      "handler": "Portraits.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/portraits/:id",
+      "handler": "Portraits.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

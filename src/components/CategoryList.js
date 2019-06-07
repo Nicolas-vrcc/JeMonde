@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default class CategoryList extends React.Component {
     constructor(){
@@ -23,10 +24,16 @@ export default class CategoryList extends React.Component {
         }else{
         return this.state.categories.map((cat) =>{
             return(
-                <div>
-                    <p>{cat.cat}</p>
-                    <img src={`http://localhost:1337${cat.image.url}`} alt={cat.cat}/>
+                <Link to={`/portrait/${cat.url_cat}`} className="flexitemcategory  col-6">
+                    <div className="imgcontainer" style={{
+                        backgroundImage: `url(http://localhost:1337${cat.image.url})`,
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat'
+                    }}>
+                    <p className="labelimg">{cat.cat}</p>
                 </div>
+                </Link>
             )
         })
         }
@@ -35,8 +42,10 @@ export default class CategoryList extends React.Component {
     render() {
         return (
             <div>
-                <h2>Catégories :</h2>
+                <h2>Aujourd’ hui vous vous-sentez plutôt... ?</h2>
+                <div className="row justify-content-center align-items-center">
                 {this.displayCategoryList}
+                </div>
             </div>
         );
     }

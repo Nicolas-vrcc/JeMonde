@@ -1,0 +1,43 @@
+{
+  "connection": "default",
+  "collectionName": "portraits",
+  "info": {
+    "name": "portraits",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "nom": {
+      "default": "",
+      "type": "string"
+    },
+    "monde": {
+      "default": "",
+      "type": "string"
+    },
+    "engagement": {
+      "default": "",
+      "type": "string"
+    },
+    "citation": {
+      "default": "",
+      "type": "string"
+    },
+    "cat": {
+      "default": "",
+      "type": "string"
+    },
+    "texte": {
+      "default": "",
+      "type": "string"
+    },
+    "email": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}
